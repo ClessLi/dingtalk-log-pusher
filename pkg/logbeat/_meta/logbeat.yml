@@ -1,0 +1,11 @@
+########################## {Beat} ############################
+
+logbeat:
+  # Defines how often an event is sent to the output
+  period: 1s
+  # Defines format string for output
+  #   ${Env}: Config.Inputs[*].Fields.Env
+  #   ${Title}: CInputs[*].Fields.Title
+  #   ${Date}: Filter.Date
+  #   ${Msg}: Filter.Msg
+  output_format: "${Env}环境-${Title}日志：\n\t日志时间：${Date}\n\t日志信息：${Msg}"
